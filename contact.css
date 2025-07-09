@@ -289,3 +289,53 @@ a:hover {
     font-size: 0.82rem;
   }
 }
+
+@media (max-width: 385px){
+
+  .contact-card {
+   width: 135px;
+   height: 85px;
+}
+.contact-card p{
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 380px){
+
+  .contact-card {
+   width: 132px;
+   height: 83px;
+}
+.contact-card p{
+    font-size: 0.75rem;
+  }
+  .hero-text p{
+    font-size: 0.8rem;
+  }
+  .cta-block p{
+    font-size: 0.75rem;
+  
+}
+
+@media (max-width: 375px){
+
+  .contact-card {
+   width: 128px;
+   height: 78px;
+}
+.contact-card p{
+    font-size: 0.71rem;
+  }
+}
+
+@media (max-width: 370px){
+
+  .contact-card {
+   width: 125px;
+   height: 75px;
+}
+.contact-card p{
+    font-size: 0.7rem;
+  }
+}
