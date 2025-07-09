@@ -81,6 +81,10 @@ body {
   font-size: 1.4rem;
 }
 
+.nav.open a{
+padding-bottom: 10px;
+}
+
 .nav a:hover {
   color: #ffd700;
 }
