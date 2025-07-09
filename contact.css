@@ -188,19 +188,35 @@ a:hover {
 @media (max-width: 480px){
 
   .contact-card {
-   width: 200px;
+   width: 210px;
    height: 100px;
 }
 }
 
-@media (max-width: 450px){
+@media (max-width: 470px){
+
+  .contact-card {
+   width: 210px;
+   height: 100px;
+}
+}
+
+@media (max-width: 460px){
+
+  .contact-card {
+   width: 180px;
+   margin-right: 10px;
+}
+}
+
+@media (max-width: 445px){
 
   .contact-card {
    width: 170px;
 }
 }
 
-@media (max-width: 435px){
+@media (max-width: 430px){
 
   .contact-card {
    margin-right: 20px;
@@ -210,7 +226,7 @@ a:hover {
 }
 }
 
-@media (max-width: 420px){
+@media (max-width: 415px){
 
   .contact-card {
    margin-right: 20px;
@@ -226,7 +242,7 @@ a:hover {
 @media (max-width: 400px){
 
   .contact-card {
-   margin-right: 10px;
    width: 140px;
+   margin-right: 10px;
 }
 }
