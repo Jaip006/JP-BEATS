@@ -482,7 +482,6 @@ padding-bottom: 10px;
   background: transparent;
   border: none;
   color: #fff;
-  font-size: 0.8rem;
   margin-left: 0;
   cursor: pointer;
   padding: 0 1rem;
@@ -491,7 +490,7 @@ padding-bottom: 10px;
 }
 
 .close-now-playing:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   color: #ffd900;
 }
 

@@ -77,7 +77,7 @@ audios.forEach(audio => {
 
   audio.addEventListener("pause", () => {
     if (audio === currentAudio) {
-      togglePlayBtn.textContent = "▷";
+      togglePlayBtn.textContent = "▶";
       cancelAnimationFrame(progressRAF);
     }
   });
@@ -85,7 +85,7 @@ audios.forEach(audio => {
   audio.addEventListener("ended", () => {
     if (audio === currentAudio) {
       nowPlayingBar.style.display = "none";
-      togglePlayBtn.textContent = "▷";
+      togglePlayBtn.textContent = "▶";
       progressBar.value = 0;
       currentAudio = null;
       cancelAnimationFrame(progressRAF);
@@ -111,7 +111,7 @@ togglePlayBtn.addEventListener("click", () => {
     progressRAF = requestAnimationFrame(updateProgress);
   } else {
     currentAudio.pause();
-    togglePlayBtn.textContent = "▷";
+    togglePlayBtn.textContent = "▶";
     cancelAnimationFrame(progressRAF);
   }
 });
@@ -156,7 +156,7 @@ closeNowPlaying.addEventListener("click", () => {
     currentAudio = null;
   }
   progressBar.value = 0;
-  togglePlayBtn.textContent = "▷";
+  togglePlayBtn.textContent = "▶";
   nowPlayingBar.style.display = "none";
 });
 document.addEventListener("keydown", (e) => {
