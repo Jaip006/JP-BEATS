@@ -77,7 +77,7 @@ audios.forEach(audio => {
 
   audio.addEventListener("pause", () => {
     if (audio === currentAudio) {
-      togglePlayBtn.textContent = "▶";
+      togglePlayBtn.textContent = "▷";
       cancelAnimationFrame(progressRAF);
     }
   });
@@ -85,7 +85,7 @@ audios.forEach(audio => {
   audio.addEventListener("ended", () => {
     if (audio === currentAudio) {
       nowPlayingBar.style.display = "none";
-      togglePlayBtn.textContent = "▶";
+      togglePlayBtn.textContent = "▷";
       progressBar.value = 0;
       currentAudio = null;
       cancelAnimationFrame(progressRAF);
@@ -111,7 +111,7 @@ togglePlayBtn.addEventListener("click", () => {
     progressRAF = requestAnimationFrame(updateProgress);
   } else {
     currentAudio.pause();
-    togglePlayBtn.textContent = "▶";
+    togglePlayBtn.textContent = "▷";
     cancelAnimationFrame(progressRAF);
   }
 });
@@ -145,4 +145,22 @@ progressBar.addEventListener("input", (e) => {
 
   // Update elapsed time display
   elapsed.textContent = formatTime(currentAudio.currentTime);
+});
+
+const closeNowPlaying = document.getElementById("closeNowPlaying");
+
+closeNowPlaying.addEventListener("click", () => {
+  if (currentAudio) {
+    currentAudio.pause();        // Pause audio
+    currentAudio.currentTime = 0; // Reset audio
+    currentAudio = null;
+  }
+  progressBar.value = 0;
+  togglePlayBtn.textContent = "▷";
+  nowPlayingBar.style.display = "none";
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && nowPlayingBar.style.display === "flex") {
+    closeNowPlaying.click();
+  }
 });
