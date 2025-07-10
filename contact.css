@@ -163,6 +163,25 @@ a:hover {
   scrollbar-color: #a9a925 #111;
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.6);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(255, 215, 0, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
+  }
+}
+
+.cta-button:hover {
+  animation: pulse 1.2s infinite;
+}
+
 @media (max-width: 580px){
 
   .contact-card {

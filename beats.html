@@ -122,6 +122,24 @@
     &copy; 2025 JP BEATS. All rights reserved.
   </footer>
 
+  <!-- Now Playing Bar -->
+  <div id="nowPlayingBar" class="now-playing-bar">
+  <img id="nowPlayingImg" src="" alt="Beat Art">
+  <div class="info">
+    <h4 id="track-title">Now Playing</h4>
+    <p id="track-artist">JP BEATS</p>
+  </div>
+
+  <div class="progress-wrapper">
+    <span id="elapsed">0:00</span>
+    <input type="range" id="progress-bar" value="0" min="0" max="100">
+    <span id="duration">0:00</span>
+  </div>
+  <button id="togglePlayBtn">⏸</button>
+  <button id="closeNowPlaying" class="close-now-playing">✖</button>
+</div>
+</div>
+
   <script src="script.js"></script>
 </body>
 </html>
