@@ -51,7 +51,7 @@ body {
   color: #f4f4f4;
   font-size: 1.7rem;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   transition: color 0.3s ease;
   font-weight: 1000;
 }
