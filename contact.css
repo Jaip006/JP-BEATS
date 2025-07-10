@@ -85,8 +85,7 @@ a:hover {
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(255, 215, 0, 0.08);
-  transition: transform 0.3s ease;
-
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .contact-card:hover {
@@ -102,13 +101,16 @@ a:hover {
 }
 
 .contact-card h3 {
-  margin-bottom: 0.5rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
   font-size: 1.3rem;
   color: #fff;
 }
 
 .contact-card p {
   color: #ccc;
+  margin: 0 0.1rem;
+  font-size: 0.95rem;
 }
 
 /* CTA Block */
@@ -152,6 +154,15 @@ a:hover {
   font-size: 0.9rem;
 }
 
+.scroll-behavior {
+  scroll-behavior: smooth;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #a9a925 #111;
+}
+
 @media (max-width: 580px){
 
   .contact-card {
@@ -168,7 +179,7 @@ a:hover {
   }
 
   .contact-hero p{
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
 .cta-block h2 {
@@ -190,6 +201,11 @@ a:hover {
   .contact-card {
    width: 210px;
    height: 100px;
+}
+
+.contact-card h3 {
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
 }
 }
 
@@ -238,7 +254,7 @@ a:hover {
    margin-right: 20px;
 }
 .contact-hero p{
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 }
 
@@ -262,7 +278,7 @@ a:hover {
    margin-right: 10px;
 }
 .contact-card p{
-    font-size: 0.88rem;
+    font-size: 0.82rem;
   }
 }
 
@@ -274,7 +290,7 @@ a:hover {
    margin-right: 10px;
 }
 .contact-card p{
-    font-size: 0.85rem;
+    font-size: 0.81rem;
   }
 }
 
@@ -286,7 +302,7 @@ a:hover {
    margin-right: 10px;
 }
 .contact-card p{
-    font-size: 0.82rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -297,7 +313,7 @@ a:hover {
    height: 85px;
 }
 .contact-card p{
-    font-size: 0.8rem;
+    font-size: 0.79rem;
   }
 }
 
@@ -315,7 +331,7 @@ a:hover {
   }
   .cta-block p{
     font-size: 0.75rem;
-  
+  }
 }
 
 @media (max-width: 375px){
