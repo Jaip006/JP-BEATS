@@ -69,7 +69,7 @@ audios.forEach(audio => {
     nowPlayingImg.src = card.querySelector("img").src;
 
     nowPlayingBar.style.display = "flex";
-    togglePlayBtn.textContent = "⏸";
+    togglePlayBtn.textContent = "❚❚";
 
     cancelAnimationFrame(progressRAF);
     progressRAF = requestAnimationFrame(updateProgress);
@@ -107,7 +107,7 @@ togglePlayBtn.addEventListener("click", () => {
 
   if (currentAudio.paused) {
     currentAudio.play();
-    togglePlayBtn.textContent = "⏸";
+    togglePlayBtn.textContent = "❚❚";
     progressRAF = requestAnimationFrame(updateProgress);
   } else {
     currentAudio.pause();
