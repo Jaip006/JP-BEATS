@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>All Beats | JP BEATS</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="images/cropped_circle_image.png" />
 </head>
+
 <body>
   <header class="header">
     <div class="container">
@@ -28,7 +30,7 @@
     <h2>🔥 All Beats</h2>
 
     <div class="beat-grid">
-      
+
       <!-- Beat Card -->
       <div class="beat-card">
         <img src="images/1.jpg" class="beat-image" alt="Beat Cover" />
@@ -42,7 +44,7 @@
         <a href="https://beat22.com/@jpontrack" target="_blank" rel="noopener noreferrer" class="btn-buy">Buy now</a>
       </div>
 
-            <div class="beat-card">
+      <div class="beat-card">
         <img src="images/2.jpg" class="beat-image" alt="Beat Cover" />
         <h3>Zanjeer</h3>
         <p><strong>Type:</strong> Trap</p>
@@ -54,7 +56,7 @@
         <a href="https://beat22.com/@jpontrack" target="_blank" rel="noopener noreferrer" class="btn-buy">Buy now</a>
       </div>
 
-            <div class="beat-card">
+      <div class="beat-card">
         <img src="images/3.png" class="beat-image" alt="Beat Cover" />
         <h3>Rich Dawg</h3>
         <p><strong>Type: </strong> Trap</p>
@@ -63,10 +65,10 @@
         <audio controls controlslist="nodownload" oncontextmenu="return false;">
           <source src="audio/3.mp3" type="audio/mpeg" />
         </audio>
-       <a href="https://beat22.com/@jpontrack" target="_blank" rel="noopener noreferrer" class="btn-buy">Buy now</a>
+        <a href="https://beat22.com/@jpontrack" target="_blank" rel="noopener noreferrer" class="btn-buy">Buy now</a>
       </div>
 
-            <div class="beat-card">
+      <div class="beat-card">
         <img src="images/4.png" class="beat-image" alt="Beat Cover" />
         <h3>Life's Good</h3>
         <p><strong>Type:</strong> Trap</p>
@@ -75,10 +77,10 @@
         <audio controls controlslist="nodownload" oncontextmenu="return false;">
           <source src="audio/4.mp3" type="audio/mpeg" />
         </audio>
-        <a href="https://beat22.com/@jpontrack" target="_blank" rel="noopener noreferrer"  class="btn-buy">Buy now</a>
+        <a href="https://beat22.com/@jpontrack" target="_blank" rel="noopener noreferrer" class="btn-buy">Buy now</a>
       </div>
 
-            <div class="beat-card">
+      <div class="beat-card">
         <img src="images/5.png" class="beat-image" alt="Beat Cover" />
         <h3>Legend</h3>
         <p><strong>Type:</strong> Trap</p>
@@ -87,10 +89,10 @@
         <audio controls controlslist="nodownload" oncontextmenu="return false;">
           <source src="audio/5.mp3" type="audio/mpeg" />
         </audio>
-        <a href="https://beat22.com/@jpontrack" target="_blank" rel="noopener noreferrer"  class="btn-buy">Buy now</a>
+        <a href="https://beat22.com/@jpontrack" target="_blank" rel="noopener noreferrer" class="btn-buy">Buy now</a>
       </div>
 
-            <div class="beat-card">
+      <div class="beat-card">
         <img src="images/6.png" class="beat-image" alt="Beat Cover" />
         <h3>Journey</h3>
         <p><strong>Type:</strong> Lofi</p>
@@ -102,7 +104,7 @@
         <a href="" target="_blank" id="sold" class="btn-buy">Sold</a>
       </div>
 
-            <div class="beat-card">
+      <div class="beat-card">
         <img src="images/7.png" class="beat-image" alt="Beat Cover" />
         <h3>Nature</h3>
         <p><strong>Type:</strong> Lofi</p>
@@ -111,7 +113,7 @@
         <audio controls controlslist="nodownload" oncontextmenu="return false;">
           <source src="audio/7.mp3" type="audio/mpeg" />
         </audio>
-        <a href="https://beat22.com/@jpontrack" target="_blank" rel="noopener noreferrer"  class="btn-buy">Buy now</a>
+        <a href="https://beat22.com/@jpontrack" target="_blank" rel="noopener noreferrer" class="btn-buy">Buy now</a>
       </div>
 
 
@@ -124,22 +126,23 @@
 
   <!-- Now Playing Bar -->
   <div id="nowPlayingBar" class="now-playing-bar">
-  <img id="nowPlayingImg" src="" alt="Beat Art">
-  <div class="info">
-    <h4 id="track-title">Now Playing</h4>
-    <p id="track-artist">JP BEATS</p>
-  </div>
+    <img id="nowPlayingImg" src="" alt="Beat Art">
+    <div class="info">
+      <h4 id="track-title">Now Playing</h4>
+      <p id="track-artist">JP BEATS</p>
+    </div>
 
-  <div class="progress-wrapper">
-    <span id="elapsed">0:00</span>
-    <input type="range" id="progress-bar" value="0" min="0" max="100">
-    <span id="duration">0:00</span>
+    <div class="progress-wrapper">
+      <span id="elapsed">0:00</span>
+      <input type="range" id="progress-bar" value="0" min="0" max="100">
+      <span id="duration">0:00</span>
+    </div>
+    <button id="togglePlayBtn">❚❚</button>
+    <button id="closeNowPlaying" class="close-now-playing">🡻</button>
   </div>
-  <button id="togglePlayBtn">⏸</button>
-  <button id="closeNowPlaying" class="close-now-playing">✖</button>
-</div>
-</div>
+  </div>
 
   <script src="script.js"></script>
 </body>
+
 </html>
