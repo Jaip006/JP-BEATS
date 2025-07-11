@@ -51,9 +51,9 @@ body {
   color: #f4f4f4;
   font-size: 1.7rem;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
   transition: color 0.3s ease;
-  font-weight: 1000;
+  font-weight: bolder;
 }
 
 .logo:hover {
@@ -584,14 +584,14 @@ padding-bottom: 10px;
   height: 70px;
   border-radius: 50%;
   margin-bottom: 1rem;
-  animation: pulseLogo 1.5s infinite ease-in-out;
+  animation: pulseLogo 1s infinite ease-in-out;
 }
 
 /* Pulse Logo Animation */
 @keyframes pulseLogo {
-  0% { transform: scale(1); opacity: 0.8; }
+  0% { transform: scale(1); opacity: 0.6; }
   50% { transform: scale(1.1); opacity: 1; }
-  100% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 0.6; }
 }
 
 
@@ -607,6 +607,7 @@ padding-bottom: 10px;
   
   .logo {
     font-size: 1.45rem;
+      
   }
 
   .nav a {
@@ -762,6 +763,7 @@ padding-bottom: 10px;
 
  .container {
   padding: 0 0.4rem;
+   padding-bottom: 6px;
 }
 
 .nav {
@@ -876,6 +878,7 @@ padding-bottom: 10px;
 
  .container {
   padding: 0 0.1rem; 
+   padding-bottom: 8px;
 }
 
   .header {
