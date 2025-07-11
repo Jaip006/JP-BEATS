@@ -8,7 +8,7 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -257,69 +257,67 @@ padding-bottom: 10px;
   font-size: 1.125rem;
 }
 
+/* Licensing Section */
 .license {
-  background-color: #111;
-  padding: 4rem 1rem;
-  margin-top: 2.5rem;
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.05);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: #0a0a0a;
+  color: #f4f4f4;
+  padding: 4rem 2rem;
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
 }
 
 .license h2 {
-  text-align: center;
-  font-size: 2.3rem;
-  color: #ffd700;
-  padding-bottom: 5px;
+  font-size: 2.5rem;
   margin-bottom: 3rem;
-  font-weight: 800;
-  font-family: 'Rubik', sans-serif;
+  color: #ffdd00;
 }
 
+/* Grid Layout for Licensing Options */
 .license-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.8rem;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
+/* Individual License Cards */
 .license-tier {
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
   padding: 2rem;
-  box-shadow: 0 0 12px rgba(255, 215, 0, 0.05);
-  transition: transform 0.3s ease;
-  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
 }
 
 .license-tier:hover {
-  animation: pulse 1.2s ease infinite;
-   transform: translateY(-5px);
-  box-shadow: 0 0 18px rgba(255, 215, 0, 0.12);
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
 }
-
 
 .license-tier h3 {
   font-size: 1.5rem;
-  color: #ffd700;
-  margin-bottom: 1.1rem;
-  font-weight: 600;
-  font-family: 'Rubik', sans-serif;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  color: #00ffff;
   text-align: left;
 }
 
 .license-tier ul {
   list-style: disc;
-  padding-left: 1.5rem;
-  color: #ddd;
+  padding: 0 0 0 1.5rem;
+  margin: 0;
 }
 
 .license-tier li {
   font-size: 1rem;
-  margin-bottom: 0.7rem;
-  line-height: 1.6;
+  padding: 0.5rem 0;
+  text-align: left;
 }
+
 
 /* Footer */
 .footer {
@@ -594,7 +592,6 @@ padding-bottom: 10px;
   100% { transform: scale(1); opacity: 0.6; }
 }
 
-
 @media (max-width: 1080px) {
 
   .container {
@@ -670,53 +667,11 @@ padding-bottom: 10px;
   font-size: 1.1rem;
 }
 
-.license-tier {
-  padding: 2rem;
-  width: 250px;
-}
-
-
 .license-tier h3 {
-  font-size: 1.3rem;
-  margin-bottom: 1.1rem;
+  font-size: 1.4rem;
 }
-
 .license-tier li {
-  font-size: 0.9rem;
-}
-
-}
-
-@media (max-width: 1020px) {
-.license-tier {
-  padding: 2rem;
-  width: 220px;
-}
-
-
-.license-tier h3 {
-  font-size: 1.1rem;
-  margin-bottom: 1.1rem;
-}
-
-.license-tier li {
-  font-size: 0.8rem;
-}
-}
-
-@media (max-width: 930px) {
-.license-grid {
- display: flex;
-}
-
-
-.license-tier h3 {
-  font-size: 1.1rem;
-  margin-bottom: 1.1rem;
-}
-
-.license-tier li {
-  font-size: 0.8rem;
+  font-size: 0.95rem;
 }
 }
 
@@ -805,6 +760,16 @@ padding-bottom: 10px;
   padding: 0 0.5rem;
 }
 
+.license h2 {
+  font-size: 2.1rem;
+}
+
+.license-tier h3 {
+  font-size: 1.3rem;
+}
+.license-tier li {
+  font-size: 0.9rem;
+}
 }
 
 
@@ -870,11 +835,11 @@ padding-bottom: 10px;
   }
 
   .beat-card h3 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 .beat-card p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .btn-buy {
@@ -920,8 +885,11 @@ padding-bottom: 10px;
   padding: 0 0.2rem;
 }
 
+.license h2 {
+  font-size: 2rem;
 }
 
+}
 
 @media (max-width: 580px) {
 
@@ -1022,10 +990,6 @@ padding-bottom: 10px;
 }
 }
 
-.beats h2{
-  padding-bottom:25px;
-}
-
 @media (max-width: 480px) {
   .progress-wrapper{
     margin-left: 10px;
@@ -1038,6 +1002,28 @@ padding-bottom: 10px;
   #duration {
     font-size: 1.1rem;
   }
+    .progress-wrapper{
+    margin-left: 2px;
+  }
+
+  #elapsed {
+    font-size: 0.8rem;
+  }
+
+  #duration {
+    font-size: 0.8rem;
+  }
+
+  .license h2 {
+  font-size: 1.9rem;
+}
+
+.license-tier h3 {
+  font-size: 1.2rem;
+}
+.license-tier li {
+  font-size: 0.8rem;
+}
 }
 
 @media (max-width: 430px) {
@@ -1071,22 +1057,15 @@ padding-bottom: 10px;
     font-size: 1rem;
   }
 
+    .license h2 {
+  font-size: 1.8rem;
 }
 
-@media (max-width: 480px) {
-  .progress-wrapper{
-    margin-left: 2px;
-  }
-
-  #elapsed {
-    font-size: 0.8rem;
-  }
-
-  #duration {
-    font-size: 0.8rem;
-  }
+.license-tier h3 {
+  font-size: 1.1rem;
+}
+.license-tier li {
+  font-size: 0.7rem;
 }
 
-@media (max-width: 400px) {
- 
 }
