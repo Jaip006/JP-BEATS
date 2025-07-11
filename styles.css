@@ -545,9 +545,7 @@ padding-bottom: 10px;
 .close-now-playing {
   background: transparent;
   border: none;
-  color: #fff;
-  margin-left: 0;
-  cursor: pointer;
+  color: #ffd700; cursor: pointer;
   padding: 0 1rem;
   padding-left: 0;
   transition: transform 0.2s ease;
@@ -555,7 +553,7 @@ padding-bottom: 10px;
 
 .close-now-playing:hover {
   transform: scale(1.1);
-  color: #ffd900;
+  color: #9f8700;
 }
 
 /* Preloader Overlay */
