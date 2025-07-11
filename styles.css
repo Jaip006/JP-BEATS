@@ -8,7 +8,8 @@ body {
 }
 
 .container {
-  max-width: 1450px;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 0 2rem;
 }
 
@@ -25,6 +26,7 @@ body {
   padding: 1rem 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   height: auto;
+  width: 100%;
 }
 
 .header::before {
@@ -279,7 +281,7 @@ padding-bottom: 10px;
 .license-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  gap: 1.8rem;
 }
 
 .license-tier {
@@ -288,7 +290,7 @@ padding-bottom: 10px;
   padding: 2rem;
   box-shadow: 0 0 12px rgba(255, 215, 0, 0.05);
   transition: transform 0.3s ease;
-  width: 320px;
+  width: 280px;
 }
 
 .license-tier:hover {
@@ -667,6 +669,55 @@ padding-bottom: 10px;
 .footer{
   font-size: 1.1rem;
 }
+
+.license-tier {
+  padding: 2rem;
+  width: 250px;
+}
+
+
+.license-tier h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1.1rem;
+}
+
+.license-tier li {
+  font-size: 0.9rem;
+}
+
+}
+
+@media (max-width: 1020px) {
+.license-tier {
+  padding: 2rem;
+  width: 220px;
+}
+
+
+.license-tier h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1.1rem;
+}
+
+.license-tier li {
+  font-size: 0.8rem;
+}
+}
+
+@media (max-width: 930px) {
+.license-grid {
+ display: flex;
+}
+
+
+.license-tier h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1.1rem;
+}
+
+.license-tier li {
+  font-size: 0.8rem;
+}
 }
 
 @media (max-width: 900px) {
@@ -1034,4 +1085,8 @@ padding-bottom: 10px;
   #duration {
     font-size: 0.8rem;
   }
+}
+
+@media (max-width: 400px) {
+ 
 }
