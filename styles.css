@@ -556,6 +556,45 @@ padding-bottom: 10px;
   color: #9f8700;
 }
 
+.volume-control {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#volumeBtn {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+/* Vertical volume slider */
+#volumeSlider {
+  position: absolute;
+  bottom: 120%; /* Show above the button */
+  left: 50%;
+  transform: translateX(-50%) rotate(-90deg); /* Make it vertical */
+  transform-origin: center;
+  width: 80px; /* height becomes width after rotation */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  accent-color: #fecb00;
+  margin-bottom: 0px;
+}
+
+/* Show slider on hover */
+.volume-control:hover #volumeSlider {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.volume-control:hover #volumeBtn {
+  opacity: 0;
+}
+
+
 /* Preloader Overlay */
 #preloader {
   position: fixed;

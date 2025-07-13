@@ -38,8 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-
-
 const audios = document.querySelectorAll("audio");
 const nowPlayingBar = document.getElementById("nowPlayingBar");
 const trackTitle = document.getElementById("track-title");
@@ -97,6 +95,29 @@ audios.forEach(audio => {
       const percent = (currentAudio.currentTime / currentAudio.duration) * 100;
       progressBar.value = percent || 0;
     }
+  });
+});
+
+const audioPositions = {};
+
+audios.forEach(audio => {
+  // Restore previous position if available
+  audio.addEventListener("play", () => {
+    const src = audio.currentSrc || audio.src;
+    if (audioPositions[src] && Math.abs(audio.currentTime - audioPositions[src]) > 0.1) {
+      audio.currentTime = audioPositions[src];
+    }
+  });
+
+  // Save position on pause or ended
+  const savePosition = () => {
+    const src = audio.currentSrc || audio.src;
+    audioPositions[src] = audio.currentTime;
+  };
+  audio.addEventListener("pause", savePosition);
+  audio.addEventListener("ended", () => {
+    const src = audio.currentSrc || audio.src;
+    audioPositions[src] = 0;
   });
 });
 
@@ -177,3 +198,57 @@ document.addEventListener("keydown", (e) => {
       }, 1000); // Smooth fade out
     }, 1500); // Wait 1.5 seconds before hiding
   });
+
+
+// Volume control functionality
+
+const volumeBtn = document.getElementById("volumeBtn");
+const volumeSlider = document.getElementById("volumeSlider");
+
+volumeSlider.addEventListener("input", () => {
+  if (currentAudio) {
+    currentAudio.volume = volumeSlider.value;
+    updateVolumeIcon(currentAudio.volume);
+  }
+});
+
+volumeBtn.addEventListener("click", () => {
+  if (!currentAudio) return;
+  if (currentAudio.volume > 0) {
+    currentAudio.volume = 0;
+    volumeSlider.value = 0;
+  } else {
+    currentAudio.volume = 1;
+    volumeSlider.value = 1;
+  }
+  updateVolumeIcon(currentAudio.volume);
+});
+
+function updateVolumeIcon(vol) {
+  if (vol == 0) {
+    volumeBtn.textContent = "🔇";
+  } else if (vol < 0.5) {
+    volumeBtn.textContent = "🔉";
+  } else {
+    volumeBtn.textContent = "🔊";
+  }
+}
+
+audios.forEach(audio => {
+  // Set initial volume to match slider
+  audio.volume = volumeSlider.value;
+
+  audio.addEventListener("play", () => {
+    // Restore volume to slider value when playing
+    audio.volume = volumeSlider.value;
+    updateVolumeIcon(audio.volume);
+  });
+
+  audio.addEventListener("volumechange", () => {
+    // Sync slider if volume changed elsewhere
+    if (audio === currentAudio) {
+      volumeSlider.value = audio.volume;
+      updateVolumeIcon(audio.volume);
+    }
+  });
+});
